@@ -480,3 +480,42 @@ a.action_container:link {
 .logout-button:hover {
   background-color: #ff1493;
 }
+.carousel-container {
+  width: 100%; /* 80% of the viewport width */
+  max-width: 90vw; /* Ensure it doesn't exceed 80% of the viewport width */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-inner {
+  max-height: 700px; /* Maximum height of 500px */
+}
+
+.carousel-item img {
+  max-height: 700px; /* Maximum height of 500px for images */
+  object-fit: cover; /* Ensure the images cover the carousel item */
+}
+
+.carousel-caption {
+  background-color: rgba(
+    93,
+    85,
+    85,
+    0.5
+  ); /* Semi-transparent background color */
+  position: absolute; /* Position the caption absolutely */
+  bottom: 0; /* Position the caption at the bottom */
+  left: 0; /* Position the caption on the left */
+  right: 0; /* Position the caption on the right */
+  padding: 10px; /* Padding for the caption */
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  color: #fff; /* Text color */
+  margin: 0; /* Remove default margin */
+  padding: 5px 10px; /* Padding for the text */
+}
+
+.cards {
+  margin-top: 50px;
+}
