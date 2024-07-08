@@ -20,7 +20,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const resp = await axios.post(
-        "http://localhost:8080/signin",
+        "https://quick-chat-nxlr.onrender.com/signin",
         { email, password },
         {
           headers: { "Content-Type": "application/json" },
@@ -51,7 +51,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const resp = await axios.post(
-        "http://localhost:8080/signup",
+        "https://quick-chat-nxlr.onrender.com/signup",
         { email, password, name: username },
         {
           headers: { "Content-Type": "application/json" },
@@ -80,10 +80,13 @@ const Profile = () => {
 
   const handlelogout = async () => {
     try {
-      const resp = await axios.get("http://localhost:8080/logout", {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true,
-      });
+      const resp = await axios.get(
+        "https://quick-chat-nxlr.onrender.com/logout",
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
 
       if (resp.data.success) {
         dispatch(logout());

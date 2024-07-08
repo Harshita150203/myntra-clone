@@ -13,12 +13,15 @@ function App() {
     const setusr = async () => {
       try {
         if (!isuser) {
-          const response = await axios.get("http://localhost:8080/user", {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            withCredentials: true,
-          });
+          const response = await axios.get(
+            "https://quick-chat-nxlr.onrender.com/user",
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+              withCredentials: true,
+            }
+          );
           if (response.status != 200) {
             throw new Error("Failed to fetch user details");
           }
