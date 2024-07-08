@@ -11,6 +11,10 @@ function App() {
   const isuser = useSelector((state) => state.user.isLoggedIn);
   useEffect(() => {
     const setusr = async () => {
+      const t = localStorage.getItem("token");
+      if (!token) {
+        return;
+      }
       try {
         if (!isuser) {
           const response = await axios.get(
@@ -18,6 +22,7 @@ function App() {
             {
               headers: {
                 "Content-Type": "application/json",
+                Cookie: `token=${t}`,
               },
               withCredentials: true,
             }
