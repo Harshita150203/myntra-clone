@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const setusr = async () => {
       const t = localStorage.getItem("token");
-      if (!token) {
+      if (!t) {
         return;
       }
       try {
