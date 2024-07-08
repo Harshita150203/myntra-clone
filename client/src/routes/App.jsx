@@ -32,7 +32,7 @@ function App() {
       }
     };
     setusr();
-  }, [isuser]);
+  }, [isuser, dispatch]);
 
   return (
     <>
