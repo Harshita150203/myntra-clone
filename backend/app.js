@@ -56,11 +56,11 @@ app.post("/items", async (req, res) => {
 
 mongoose
   .connect(
-    `mongodb+srv://harshita06tomar:${process.env.MONGODB_KEY}@cluster0.bg57jcn.mongodb.net/`
+    `mongodb+srv://harshita06tomar:${process.env.MONGODB_KEY}@cluster0.qbthrfp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
     app.listen(process.env.PORT);
-    console.log("connected to Database");
+    console.log("connected to DB");
   })
   .catch((err) => {
     console.log("There is a error in getting connected");
